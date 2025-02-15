@@ -45,17 +45,41 @@ HF_HOME="./.cache_hf" HF_DATASETS_OFFLINE="1" bash scripts/entry.sh Alibaba-NLP/
 ```
 
 
+### Zach Nussbaum's hack to `mewsli-x`
+The `mewsli-x` evaluation could be problematic sometimes, zach has a fix for that!
+
+https://gist.github.com/zanussbaum/05a31cdc204f58c690acb360c94314e2
+
+
 ### Citation
 If you use the code in this repo, please cite our paper \cite{zhang2024mgte} and the corresponding benchmarks.
 ```
-@misc{zhang2024mgte,
-  title={mGTE: Generalized Long-Context Text Representation and Reranking Models for Multilingual Text Retrieval}, 
-  author={Xin Zhang and Yanzhao Zhang and Dingkun Long and Wen Xie and Ziqi Dai and Jialong Tang and Huan Lin and Baosong Yang and Pengjun Xie and Fei Huang and Meishan Zhang and Wenjie Li and Min Zhang},
-  year={2024},
-  eprint={2407.19669},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2407.19669}, 
+@inproceedings{zhang-etal-2024-mgte,
+    title = "{mGTE}: Generalized Long-Context Text Representation and Reranking Models for Multilingual Text Retrieval",
+    author = "Zhang, Xin  and
+      Zhang, Yanzhao  and
+      Long, Dingkun  and
+      Xie, Wen  and
+      Dai, Ziqi  and
+      Tang, Jialong  and
+      Lin, Huan  and
+      Yang, Baosong  and
+      Xie, Pengjun  and
+      Huang, Fei  and
+      Zhang, Meishan  and
+      Li, Wenjie  and
+      Zhang, Min",
+    editor = "Dernoncourt, Franck  and
+      Preo{\c{t}}iuc-Pietro, Daniel  and
+      Shimorina, Anastasia",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing: Industry Track",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, US",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-industry.103/",
+    doi = "10.18653/v1/2024.emnlp-industry.103",
+    pages = "1393--1412",
 }
 
 @inproceedings{wang-etal-2018-glue,
