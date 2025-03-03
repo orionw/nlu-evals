@@ -1018,6 +1018,7 @@ def main():
             cache_dir=model_args.cache_dir,
             token=model_args.token,
             keep_in_memory=True,
+            trust_remote_code=True,
         )
     else:
         data_files = {}
@@ -1038,6 +1039,7 @@ def main():
             cache_dir=model_args.cache_dir,
             token=model_args.token,
             keep_in_memory=True,
+            trust_remote_code=True,
         )
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
     # https://huggingface.co/docs/datasets/loading_datasets.

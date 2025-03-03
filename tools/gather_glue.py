@@ -30,10 +30,12 @@ if len(sub_dirs) < 1:
 
 table = list()
 
+task_names = ["model", "avg"]
 for p in sub_dirs:
     name = p.stem
     row = list()
     for t, (ks, facotr) in TASK_TO_KS.items():
+        task_names.append(t)
         try:
             rp = Path(p, t, 'all_results.json')
             if not rp.exists():
@@ -47,11 +49,11 @@ for p in sub_dirs:
             row.append(result[k] * facotr)
     avg = sum(row) / len(row)
     row = [name, avg] + row
-    print(p, avg)
     table.append(row)
 
 with open(Path(output_dir, 'glue.csv'), 'w') as f:
     writer = csv.writer(f)
+    writer.writerow(task_names)
     writer.writerows(table)
     print('write to', f.name)
 

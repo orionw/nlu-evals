@@ -29,9 +29,9 @@ elif [ $EVAL_GROUP -eq 2 ]; then
     for task in wnli cola sst2 ; do
         bash scripts/run_glue_one.sh $MODEL_PATH $OUTPUT_DIR $task
     done
-    for run_job in eval_bucc18 eval_tatoeba run_tydiqa eval_mlqa eval_xquad ; do
-        bash scripts/$run_job.sh $MODEL_PATH $OUTPUT_DIR
-    done
+    # for run_job in run_tydiqa eval_mlqa eval_xquad ; do # left out eval_bucc18 eval_tatoeba
+    #     bash scripts/$run_job.sh $MODEL_PATH $OUTPUT_DIR
+    # done
 
 # paws-x wikiann udpos ~= 2150
 elif [ $EVAL_GROUP -eq 3 ]; then
